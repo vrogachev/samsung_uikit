@@ -5,14 +5,18 @@
   background: #fff;
   border-radius: 4px;
   padding: 0 15px;
+  font-size: 14px;
+  font-weight: 600;
   border: 1px solid var(--color-grey);
   &::placeholder {
-    color: var(--color-grey);
+    font-weight: 300;
+    color: var(--color-placeholder);
   }
-  &:focus {
-    border: 1px solid var(--color-blue);
-    box-shadow: 0 1px 3px 0 rgba(17, 84, 204, 0.3);
-  }
+}
+
+.Input[data-focused="true"] {
+  border: 1px solid var(--color-blue);
+  box-shadow: 0 1px 3px 0 rgba(17, 84, 204, 0.3);
 }
 
 .Input[data-disabled="true"] {

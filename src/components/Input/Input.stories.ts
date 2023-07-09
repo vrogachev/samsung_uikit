@@ -14,5 +14,11 @@ type Story = StoryObj<typeof Input>;
 
 export const Default: Story = {
   args: {
+    defaultValue: "значение",
+    placeholder: "Введите значение",
+    onChange: (event) => console.log('onChange', event),
+    onBlur: (event) => console.log('onBlur', event),
+    onFocus: (event) => console.log('onFocus', event),
+    onFocusChange: (status) => console.log('status', status)
   },
 };
