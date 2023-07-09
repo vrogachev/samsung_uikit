@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  margin:  0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --color-blue: #1154CC;
+  --color-blue-hoverd: #4096ff;;
+  --color-green: #2DB77B;
+  --color-green-hoverd: #49bc8a;
+  --color-red: #CC1111;
+  --color-red-hoverd: #dc3939;
+
+  --color-grey: #1F1F1F1F;
+  --color-grey-hovered: rgba(75, 75, 75, 0.12);
+}

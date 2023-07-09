@@ -1,0 +1,89 @@
+.Button {
+  color: #fff;
+  outline: 0;
+  margin: 0;
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+  display: inline-flex;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.Button {
+  &[data-size="small"] {
+    padding: 10px 16px;
+  }
+  &[data-size="large"] {
+    padding: 16px 34px;
+  }
+}
+
+.Button {
+  &[data-theme="default"] {
+    color: #000;
+    background: #fff;
+    border: 1px solid var(--color-grey)
+  }
+  &[data-theme="primary"] {
+    color: #fff;
+    background: var(--color-blue);
+  }
+  &[data-theme="accent"] {
+    color: #fff;
+    background: var(--color-green);
+    box-shadow: 0 4px 12px 0 #2DB77B80;
+  }
+  &[data-theme="danger"] {
+    color: #fff;
+    background: var(--color-red);
+  }
+  &[data-theme="text"] {
+    color: #000;
+    background: #fff;
+  }
+  &[data-theme="link"] {
+    color: #000;
+    background: #fff;
+  }
+}
+
+.Button[data-hovered="true"] {
+  &[data-theme="default"] {
+    color: var(--color-blue);
+    border: 1px solid var(--color-blue)
+  }
+  &[data-theme="primary"] {
+    background: var(--color-blue-hoverd);
+  }
+  &[data-theme="accent"] {
+    background: var(--color-green-hoverd);
+  }
+  &[data-theme="danger"] {
+    background: var(--color-red-hoverd);
+  }
+  &[data-theme="text"] {
+    background: var(--color-grey);
+  }
+  &[data-theme="link"] {
+    color: var(--color-blue);
+  }
+}
+
+
+.Button {
+  &[data-disabled="true"] {
+    cursor: not-allowed;
+    color: #333;
+    border: 1px solid #bbbbbb1f;
+    background-color: #bbbbbb1f;
+  }
+  &[data-pressed="true"] {
+    background-color: #233544;
+  }
+  &[data-loading="true"] {
+    opacity: .65;
+    cursor: not-allowed;
+  }
+}
