@@ -1,0 +1,26 @@
+.Select {
+  display: block;
+}
+
+.Input {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+}
+
+.Options {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.Option {
+  width: 100%;
+  font-size: 14px;
+  padding: 0 15px;
+}
