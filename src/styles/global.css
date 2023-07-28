@@ -5,16 +5,60 @@
   font-family: 'Inter', sans-serif;
 }
 
+html,
+body {
+  font-size: 10px;
+}
+
 :root {
-  --color-blue: #1154CC;
-  --color-blue-hoverd: #4096ff;;
+  --base-white: #fff;
+
+  --base-grey: #6D6D6C;
+  --secondary-grey: #F1F3FA;
+
+  --base-purple: #8996C0;
+  --base-red: #CC1111;
+  --base-blue: #1154CC;
+  --secondary-blue: #EBF5FC;
+  --additional-blue: #4C92C7;
+
+  --horizontal-padding: 0 24px;
+  --vertical-padding: 16px 0;
+
+
+
+
+
+
+
+
+  --base-blue-hoverd: #4096ff;;
   --color-green: #2DB77B;
   --color-green-hoverd: #49bc8a;
   --color-red: #CC1111;
   --color-red-hoverd: #dc3939;
 
   --color-grey: #1F1F1F1F;
+  --color-grey-secondary: #444;
   --color-grey-hovered: rgba(75, 75, 75, 0.12);
 
   --color-placeholder: #a6a6a6;
+
+  --box-shadow-blue: 0 1px 3px 0 rgba(17, 84, 204, 0.3);
+
+  --font-unit: 10;
+  --font-size-h1: calc((32 / var(--font-unit)) * 1rem);
+  --font-size-h2: calc((24 / var(--font-unit)) * 1rem);
+  --font-size-h3: calc((21 / var(--font-unit)) * 1rem);
+  --font-size-h4: calc((20 / var(--font-unit)) * 1rem);
+  --font-size-h5: calc((18 / var(--font-unit)) * 1rem);
+  --font-size-h6: calc((16 / var(--font-unit)) * 1rem);
+  --font-size-body: calc((14 / var(--font-unit)) * 1rem);
+}
+
+
+@media (max-width: 480px) {
+  :root {
+    --font-unit: 14; /* Set a different base font size for smaller screens */
+  }
 }

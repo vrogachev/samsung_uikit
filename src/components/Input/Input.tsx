@@ -4,7 +4,7 @@ import {SharedInputProps} from "../../shared/types/input";
 import {useFocus} from "../../interactions/focus/useFocus";
 
 const Input:FC<SharedInputProps> = (props) => {
-  const { loading = false, ...otherProps } = props;
+  const { loading = false, error = false , ...otherProps } = props;
 
   const [isFocused, onFocusChange] = useState<boolean>(false);
 
@@ -16,12 +16,14 @@ const Input:FC<SharedInputProps> = (props) => {
     }
   });
 
+
   return (
     <input
       {...otherProps}
       {...focusProps}
-      data-focused={isFocused}
+      aria-invalid={error}
       data-loading={loading}
+      data-focused={isFocused}
       className={styles.Input}
       data-disabled={otherProps.disabled}
     />

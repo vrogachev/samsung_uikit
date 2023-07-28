@@ -1,0 +1,22 @@
+.Wrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.Content {
+  display: block;
+}
+
+.Badge {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 40%;
+  display: inline-flex;
+  background: var(--color-red);
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(25%) translateY(-25%);
+}

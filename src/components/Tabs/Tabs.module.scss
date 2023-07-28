@@ -1,0 +1,61 @@
+.Tabs {
+  overflow: hidden;
+  &__header {
+    display: flex;
+    border-bottom: 1px solid var(--secondary-grey);
+  }
+
+  &__button {
+    height: 40px;
+    cursor: pointer;
+    display: block;
+    border: none;
+    background: none;
+    font-weight: 500;
+    position: relative;
+    padding:  0 16px 6px 16px;
+    font-size: var(--font-size-body);
+    &_active {
+      display: block;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background: var(--base-blue);
+      }
+    }
+  }
+
+  &__content {
+    display: block;
+    padding: 16px 0;
+  }
+}
+
+.Tab {
+  &__enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  &__enterActive {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  &__exit {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  &__exitActive {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 300ms, transform 300ms;
+  }
+}
+

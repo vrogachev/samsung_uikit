@@ -1,0 +1,40 @@
+.Menu {
+  display: flex;
+  width: 240px;
+  padding: 24px;
+  min-height: 100vh;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--secondary-grey);
+}
+
+.Link {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 10px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  color: var(--base-purple);
+  border-left: 2px solid transparent;
+  background: var(--secondary-grey);
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__icon {
+    display: block;
+    font-size: 2.4em;
+    margin-right: 4px;
+  }
+}
+
+.Link[data-hovered="true"] {
+  background: #fff;
+  color: var(--base-blue);
+  border-left: 2px solid #1154CC;
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+}

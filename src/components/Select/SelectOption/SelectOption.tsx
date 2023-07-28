@@ -1,17 +1,35 @@
-import React, { FC } from "react";
 import styles from "./SelectOption.module.scss";
-import { SelectOption } from "../../../shared/types/select";
+import { ISelectOptionProps } from "../../../shared/types/select";
+import React, { FC, HTMLAttributes, KeyboardEvent, useCallback, useMemo } from 'react';
 
-interface SelectOptionProps {
-  option: SelectOption;
-  onChange: (option: SelectOption) => void;
-}
-
-const SelectOption:FC<SelectOptionProps> = (props) => {
+const SelectOption:FC<ISelectOptionProps> = (props) => {
   const { option, ...otherProps } = props;
 
+  const handleSelect = useCallback(() => {
+    otherProps.onChange(option);
+  }, [option]);
+
+  const handleEnterPress = (event: KeyboardEvent<HTMLElement>) => {
+    if (event.key !== "Enter") return;
+    handleSelect();
+  }
+
+  const handlers = useMemo(() => {
+    const props: HTMLAttributes<HTMLElement> = {};
+
+    props.onClick = handleSelect;
+    props.onKeyDown = (e) => handleEnterPress(e);
+
+    return props;
+  }, []);
+
   return (
-    <div className={styles.Option} {...otherProps} onClick={() => props.onChange(option.value)}>
+    <div
+      tabIndex={0}
+      role="option"
+      {...handlers}
+      className={styles.Item}
+    >
       {option.label}
     </div>
   );

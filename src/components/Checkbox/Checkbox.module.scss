@@ -1,0 +1,34 @@
+.Label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.Input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.Input[aria-checked="true"] ~ .Mark {
+  background: var(--color-green);
+}
+
+.Mark {
+  height: 22px;
+  width: 22px;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 1.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--base-grey);
+}
+
+.Text {
+  margin-left: 6px;
+}
+

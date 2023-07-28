@@ -17,7 +17,8 @@ export const Default: Story = {
     label: 'Default button',
     theme: 'default',
     size: 'large',
-    loading: true
+    loading: true,
+    icon: "category"
   },
 };
 

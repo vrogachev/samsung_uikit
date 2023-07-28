@@ -1,5 +1,5 @@
 .Input {
-  height: 46px;
+  height: 42px;
   outline: none;
   min-width: 200px;
   background: #fff;
@@ -15,8 +15,12 @@
 }
 
 .Input[data-focused="true"] {
-  border: 1px solid var(--color-blue);
+  border: 1px solid var(--base-blue);
   box-shadow: 0 1px 3px 0 rgba(17, 84, 204, 0.3);
+}
+
+.Input[aria-invalid="true"] {
+  border: 1px solid var(--base-red);
 }
 
 .Input[data-disabled="true"] {

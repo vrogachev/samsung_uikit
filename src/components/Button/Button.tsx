@@ -1,14 +1,19 @@
+"use client";
+
 import React, { FC, useRef } from "react";
+import Icon from "../Icon/Icon";
 import styles from "./Button.module.scss";
 import { useHover } from "../../interactions/hover";
 import { SharedButtonProps } from "../../shared/types/button";
 
 
 const Button:FC<SharedButtonProps> = (props) => {
-  const { label, onClick, size = 'small', theme = 'default', ...otherProps} = props;
+  const { icon, label, onClick, size = 'small', theme = 'default', ...otherProps} = props;
   const buttonRef = useRef<HTMLButtonElement | null>(null);
 
   const { isHovered, hoverProps } = useHover(otherProps);
+
+  const buttonIcon = icon && <Icon name={icon} className={styles.Icon} />;
 
   return (
     <button
@@ -23,7 +28,7 @@ const Button:FC<SharedButtonProps> = (props) => {
       data-loading={otherProps.loading}
       data-disabled={otherProps.disabled}
      >
-      {label}
+      {buttonIcon} {label}
     </button>
   );
 };

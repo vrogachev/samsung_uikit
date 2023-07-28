@@ -1,0 +1,18 @@
+.Search {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  outline: none;
+  padding: 0 15px;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid var(--color-grey);
+}
+
+.Search[data-focused="true"] {
+  border: 1px solid var(--base-blue);
+  box-shadow: var(--box-shadow-blue);
+}

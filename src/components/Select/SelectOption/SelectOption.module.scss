@@ -1,3 +1,7 @@
-.Option {
-
+.Item {
+  padding: 10px 10px;
+  &:hover {
+    border-radius: 4px;
+    background: var(--color-grey);
+  }
 }

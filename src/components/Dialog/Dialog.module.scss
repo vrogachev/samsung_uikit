@@ -1,0 +1,27 @@
+.Dialog {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.16);
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px 15px 24px;
+  }
+
+  &__body {
+    padding: 16px 24px;
+  }
+
+  &__footer {
+    padding: 16px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__close {
+    font-size: 2em;
+  }
+}

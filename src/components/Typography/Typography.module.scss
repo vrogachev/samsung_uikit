@@ -1,0 +1,21 @@
+.Typography {
+    white-space: pre-wrap;
+}
+
+.Typography_size {
+    &--h1 { font-size: var(--font-size-h1); }
+    &--h2 { font-size: var(--font-size-h2); }
+    &--h3 { font-size: var(--font-size-h3); }
+    &--h4 { font-size: var(--font-size-h4); }
+    &--h5 { font-size: var(--font-size-h5); }
+    &--p,
+    &--span {
+        font-size: var(--font-size-body);
+    }
+}
+
+.Typography_weight {
+    &--400 { font-weight: 400; }
+    &--500 { font-weight: 500; }
+    &--600 { font-weight: 600; }
+}

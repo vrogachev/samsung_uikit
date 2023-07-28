@@ -1,0 +1,8 @@
+.Group {
+  display: flex;
+  margin-bottom: 2rem;
+  flex-direction: column;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
